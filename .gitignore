@@ -6,6 +6,7 @@
 *.sql
 *.log
 .DS_Store
+cookbooks/*
 websites/*
 .kitchen/*
 !websites/README
