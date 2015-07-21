@@ -45,8 +45,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
-    vb.customize ["modifyvm", :id, "--cpus", "4"]
-    vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
 
   time = Time.new
@@ -59,12 +59,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webapp.vm.network "private_network", ip: "192.168.33.10"
     webapp.ohai.primary_nic = "eth1"
     webapp.vm.provision "chef_zero" do |chef|
-      chef.cookbooks_path = "cookbooks"
+      chef.cookbooks_path = "../cookbooks"
       chef.roles_path = "roles"
       chef.nodes_path = "nodes"
       chef.environments_path = "environments"
       chef.environment = "development"
       chef.data_bags_path = "data_bags"
+      chef.add_role "w_haproxy_role"
       chef.add_role "w_common_role"
       chef.add_role "w_varnish_role"
       chef.add_role "w_apache_role"
