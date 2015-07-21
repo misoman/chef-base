@@ -11,27 +11,41 @@
       "passwordless": "true"
       }
     },
-    "monit_enabled": false,
+    "monit_enabled": true,
     "monit": {
       "default_monitrc_configs": ["ssh"],
       "alert_ignore_events": ["action", "instance", "pid", "ppid"],
       "alert_email": "alert@example.com",  
 	    "mail": {
-	    	"hostname": "smtp.example.com",
+	    	"hostname": "localhost",
         "port": "587",
         "security": "TLSV1",
         "from": "monit@example.com",
 		    "username": "alert@example.com",
 		    "password": "alert_password"
 	    }
-    },       
+    },
     "dbhosts": {
       "db_ip": ["127.0.0.1"],
       "webapp_ip": ["127.0.0.1"]
     },
-    "w_haproxy": {
-      "listen_port": "82",
-      "backend_port": "81"
+    "haproxy": {
+      "enable_ssl": true,
+      "incoming_port": 82,
+      "members": [{
+        "hostname": "0varnish.examplewebsite.com",
+        "ipaddress": "192.168.33.10",
+        "port": 80,
+        "ssl_port": 80
+      }]
+    },
+    "keepalived": {
+      "instances": {
+        "vi_1": {
+          "ip_addresses": "192.168.33.11",
+          "interface": "eth1"
+        }
+      }
     },
     "varnish": {
       "listen_port": "80",
