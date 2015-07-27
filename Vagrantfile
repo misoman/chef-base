@@ -59,7 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webapp.vm.network "private_network", ip: "192.168.33.10"
     webapp.ohai.primary_nic = "eth1"
     webapp.vm.provision "chef_zero" do |chef|
-      chef.cookbooks_path = "../cookbooks"
+      #chef.cookbooks_path = "../cookbooks"
       chef.roles_path = "roles"
       chef.nodes_path = "nodes"
       chef.environments_path = "environments"
