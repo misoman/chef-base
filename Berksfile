@@ -1,5 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+Encoding.default_external = "UTF-8"
 source 'https://supermarket.chef.io'
 
 cookbook 'ubuntu'
