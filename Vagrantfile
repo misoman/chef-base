@@ -5,10 +5,6 @@
 VAGRANTFILE_API_VERSION = "2"
 
 %w[ vagrant-berkshelf vagrant-ohai ].each do |plugin|
-  unless Vagrant.has_plugin?(plugin)
-    raise 'Reqired vagrant plugin not found. Please run "vagrant plugin install ' + plugin + '"'
-  end
-
   # Require the Trigger plugin for Vagrant
   unless Vagrant.has_plugin?(plugin)
     # Attempt to install ourself.
