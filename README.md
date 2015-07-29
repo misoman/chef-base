@@ -1,5 +1,6 @@
 PHP High Availability Multi Tier Application Chef Cookbook
 ==========================================================
+[![Build Status](https://travis-ci.org/haapp/chef-base.svg?branch=master)](https://travis-ci.org/haapp/chef-base)
 
 (This guide is for PHP developers and system administrators without DevOps experience, yet assuming you know how to use Git)
 
