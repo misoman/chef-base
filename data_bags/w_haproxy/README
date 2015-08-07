@@ -1,4 +1,4 @@
-in this folder create cert_key.json with following content:
+in this folder create cert.json with following content:
 
 {
   "id": "cert",
