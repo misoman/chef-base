@@ -14,14 +14,7 @@ describe 'w_apache::default' do
     it { should be_file }
   end
     
-	['ondrej/php5', 'ondrej/apache2'].each do |ppa| 
-		describe ppa("#{ppa}") do
-		  it { should exist }
-		  it { should be_enabled }
-		end
-	end
-	
-	['apache2', 'apache2-mpm-worker'].each do |package|	
+	['apache2'].each do |package|	
 		describe package("#{package}") do
 	  	it { should be_installed }
 		end

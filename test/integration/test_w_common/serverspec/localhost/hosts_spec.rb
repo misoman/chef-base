@@ -14,7 +14,7 @@ describe 'w_comman::hosts' do
   
 	describe host('localhost') do
     it { should be_resolvable.by('hosts') }
-    its(:ipaddress) { should eq '::1' }
+    its(:ipaddress) { should eq '127.0.0.1' }
   end
         
 end

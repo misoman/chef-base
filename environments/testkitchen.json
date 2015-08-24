@@ -27,7 +27,8 @@
     },   
     "dbhosts": {
       "db_ip": ["172.31.6.12"],
-      "webapp_ip": ["172.31.3.12"]
+      "webapp_ip": ["172.31.3.12"],
+      "chefserver_ip": "184.106.28.84"
     },
     "haproxy": {
       "members": [{
@@ -76,6 +77,10 @@
       "nfs": {
         "enabled": false
       }
+    },
+    "phpmyadmin": {
+      "home": "/websites/phpmyadmin",
+      "home_alias": "/phpmyadmin"
     },
     "w_memcached": {
       "ips": ["127.0.0.1"]

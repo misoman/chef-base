@@ -19,7 +19,8 @@
           "connection_domain": {
             "db_domain": "db.examplewebsite.com",
             "webapp_domain": "webapp.examplewebsite.com",
-            "varnish_domain": "varnish.examplewebsite.com"
+            "varnish_domain": "varnish.examplewebsite.com",
+            "chefserver_domain": "manage.chef.io"
           },
           "mysql": {
             "db": "ex_db",
