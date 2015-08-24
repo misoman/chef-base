@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'w_percona::database' do
 	
-	root_password = 'rootpw!'
+	root_password = 'rootpw!!'
 	db_host = host_inventory['ec2']['hostname'].nil? ? host_inventory['hostname'] : host_inventory['ec2']['hostname'] 
 	
 	[db_host, 'localhost'].each do |empty_user_host|

@@ -5,8 +5,10 @@
 *.orig
 *.sql
 *.log
+*.bundle
 .DS_Store
 cookbooks/
+vendor/*
 websites/*
 .kitchen/*
 !websites/README

@@ -14,10 +14,11 @@ describe 'w_haproxy::default' do
   describe port(80) do
     it { should be_listening }
   end
-
-  describe port(443) do
-    it { should be_listening }
-  end
+  
+  # comment out when enable_ssl is true
+  #describe port(443) do
+  #  it { should be_listening }
+  #end
 
   describe port(22002) do
     it { should be_listening }

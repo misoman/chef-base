@@ -27,7 +27,8 @@
     },
     "dbhosts": {
       "db_ip": ["127.0.0.1"],
-      "webapp_ip": ["127.0.0.1"]
+      "webapp_ip": ["127.0.0.1"],
+      "chefserver_ip": "127.0.0.1"
     },
     "haproxy": {
       "enable_ssl": true,
@@ -76,6 +77,10 @@
       "phpmyadmin": {
         "enabled": true
       }
+    },
+    "phpmyadmin": {
+      "home": "/websites/phpmyadmin",
+      "home_alias": "/phpmyadmin"
     },
     "w_memcached": {
       "ips": ["127.0.0.1"]
