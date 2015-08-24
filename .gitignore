@@ -24,4 +24,6 @@ data_bags/w_mysql/*
 !data_bags/w_mysql/README
 data_bags/w_haproxy/*
 !data_bags/w_haproxy/README
+data_bags/w_percona/*
+!data_bags/w_percona/README
 *~
