@@ -43,6 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       chef.environments_path = "environments"
       chef.environment = "development"
       chef.data_bags_path = "data_bags"
+      #chef.encrypted_data_bag_secret_key_path = "test/fixtures/data_bags/encrypted_data_bag_secret"
       chef.add_role "w_haproxy_role"
       chef.add_role "w_common_role"
       chef.add_role "w_varnish_role"

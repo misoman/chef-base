@@ -1,0 +1,7 @@
+in this folder create root_credential.json with following content:
+
+{
+  "id": "db_credential",
+  "root_password": "rootpw!!",
+  "backup_password": "backuppw!!"
+}
