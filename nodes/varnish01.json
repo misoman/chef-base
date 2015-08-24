@@ -1,0 +1,12 @@
+{
+  "name": "varnish01",
+  "chef_environment": "production",
+  "normal": {
+    "tags": [
+    ]
+  },
+  "run_list": [
+    "role[w_common_role]",
+    "role[w_varnish_role]"
+  ]
+}

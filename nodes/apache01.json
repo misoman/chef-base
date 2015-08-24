@@ -1,0 +1,21 @@
+{
+  "name": "apache01",
+  "chef_environment": "production",
+  "normal": {
+    "tags": [
+    ],
+    "w_apache": {
+      "phpmyadmin": {
+        "enabled": true
+      }
+    },
+    "phpmyadmin": {
+      "home": "/websites/phpmyadmin",
+      "home_alias": "/phpmyadmin"
+    }
+  },
+  "run_list": [
+    "role[w_common_role]",
+    "role[w_apache_role]"
+  ]
+}
