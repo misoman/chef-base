@@ -1,6 +1,6 @@
 {
   "name":"w_haproxy_role",
-  "description":"NFS",
+  "description":"HAProxy",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "default_attributes": {
