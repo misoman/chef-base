@@ -20,7 +20,7 @@
             "db_domain": "db.examplewebsite.com",
             "webapp_domain": "webapp.examplewebsite.com",
             "varnish_domain": "varnish.examplewebsite.com",
-            "chefserver_domain": "manage.chef.io"
+            "chefserver_domain": "api.opscode.com"
           },
           "mysql": {
             "db": "ex_db",
