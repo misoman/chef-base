@@ -7,7 +7,7 @@
     "authorization": {
       "sudo": {
       "groups": ["admin"],
-      "users": ["vagrant"],
+      "users": ["ubuntu"],
       "passwordless": "true"
       }
     },
