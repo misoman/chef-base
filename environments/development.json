@@ -15,7 +15,7 @@
     "monit": {
       "default_monitrc_configs": ["ssh"],
       "alert_ignore_events": ["action", "instance", "pid", "ppid"],
-      "alert_email": "alert@example.com",  
+      "alert_email": "alert@example.com",
 	    "mail": {
 	    	"hostname": "localhost",
         "port": "587",
@@ -25,10 +25,13 @@
 		    "password": "alert_password"
 	    }
     },
+    "chefserver":{
+      "ip": "127.0.0.1",
+      "hostname": "api.opscode.com"
+    },
     "dbhosts": {
       "db_ip": ["127.0.0.1"],
-      "webapp_ip": ["127.0.0.1"],
-      "chefserver_ip": "127.0.0.1"
+      "webapp_ip": ["127.0.0.1"]
     },
     "haproxy": {
       "enable_ssl": true,
