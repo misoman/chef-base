@@ -26,8 +26,8 @@
 	    }
     },
     "chefserver":{
-      "ip": "184.106.28.84",
-      "hostname": "api.opscode.com"
+      "ip": "10.10.1.84",
+      "hostname": "chefserver.examplechefserver.com"
     },
     "dbhosts": {
       "db_ip": ["172.31.6.12"],
