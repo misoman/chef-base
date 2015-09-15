@@ -32,7 +32,7 @@ cookbook 'nfs'
 cookbook 'cron'
 
 group :wrapper do
-  cookbook 'w_common', git: 'https://github.com/haapp/w_common.git', ref: '01c3d2f170e678395bb9e5f0fdb220c73a080afd'
+  cookbook 'w_common', git: 'https://github.com/haapp/w_common.git'
   cookbook 'w_haproxy', git: 'https://github.com/haapp/w_haproxy.git'
   cookbook 'w_varnish', git: 'https://github.com/haapp/w_varnish.git'
   cookbook 'w_apache', git: 'https://github.com/haapp/w_apache.git'
