@@ -17,4 +17,5 @@ group :integration do
   gem 'vagrant-wrapper'
   gem 'kitchen-sync'
   gem 'test-kitchen'
+  gem 'kitchen-openstack'
 end
