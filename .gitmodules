@@ -1,0 +1,27 @@
+[submodule "test/integration/test_w_apache"]
+	path = test/integration/test_w_apache
+	url = https://github.com/haapp/serverspec-w_apache.git
+[submodule "test/integration/test_w_common"]
+	path = test/integration/test_w_common
+	url = https://github.com/haapp/serverspec-w_common.git
+[submodule "test/integration/test_w_memcached"]
+	path = test/integration/test_w_memcached
+	url = https://github.com/haapp/serverspec-w_memcached.git
+[submodule "test/integration/test_w_mysql"]
+	path = test/integration/test_w_mysql
+	url = https://github.com/haapp/serverspec-w_mysql.git
+[submodule "test/integration/test_w_nfs"]
+	path = test/integration/test_w_nfs
+	url = https://github.com/haapp/serverspec-w_nfs.git
+[submodule "test/integration/test_w_percona"]
+	path = test/integration/test_w_percona
+	url = https://github.com/haapp/serverspec-w_percona.git
+[submodule "test/integration/test_w_varnish"]
+	path = test/integration/test_w_varnish
+	url = https://github.com/haapp/serverspec-w_varnish.git
+[submodule "test/integration/test_w_haproxy_master"]
+	path = test/integration/test_w_haproxy_master
+	url = https://github.com/haapp/serverspec-w_haproxy.git
+[submodule "test/integration/test_w_haproxy_backup"]
+	path = test/integration/test_w_haproxy_backup
+	url = https://github.com/haapp/serverspec-w_haproxy.git
