@@ -53,8 +53,8 @@ $ sudo apt-get install chefdk
 **fllowing sections, ```subl``` command is used to launch Sublime Text as editor from command line to edit files
 
 ```shell
-git clone https://github.com/joelhandwell/php-ha-multi-tier-app-cookbook.git
-cd php-ha-multi-tier-app-cookbook
+git clone --recursive https://github.com/haapp/chef-base.git
+cd chef-base
 vagrant up
 ```
 

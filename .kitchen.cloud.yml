@@ -2,11 +2,26 @@
 #<% time = Time.new.strftime("%F %H:%M") %>
 ---
 driver:
-  name: vagrant
-   
+  name: openstack
+  openstack_username: <%= ENV['OS_USERNAME'] %>
+  openstack_api_key: <%= ENV['OS_PASSWORD'] %>
+  openstack_auth_url: <%= "#{ENV['OS_AUTH_URL']}/tokens" %>
+  openstack_tenant: <%= ENV['OS_TENANT'] %>
+  image_ref: <%= ENV['SERVER_IMAGE_REF'] %>
+  flavor_ref: <%= ENV['SERVER_FLAVOR_REF'] %>
+  network_ref: <%= ENV['SERVER_NETWORK_REF'] %>
+  floating_ip_pool: <%= ENV['SERVER_FLOATING_IP'] %>
+  disable_ssl_validation: true
+  require_chef_omnibus: true
+     
+transport:
+  ssh_key: "testkitchen_ssh/testkitchen-ssh-key.pem"
+  connection_timeout: 10
+  connection_retries: 5
+  username: ubuntu
+    
 provisioner:
   name: chef_zero
-  #cookbook_path: ../cookbooks
   environments_path: environments
   roles_path: roles
   data_bags_path: test/fixtures/data_bags
@@ -34,7 +49,7 @@ suites:
     driver:
       #vm_hostname: "haproxy01"
       network:
-        - ["private_network", {ip: "172.31.1.12"}]
+        #- ["private_network", {ip: "172.31.1.12"}]
     run_list:
       - role[w_common_role]
       - role[w_haproxy_role]
@@ -55,7 +70,7 @@ suites:
     driver:
       #vm_hostname: "haproxy02"
       network:
-        - ["private_network", {ip: "172.31.1.13"}]
+        #- ["private_network", {ip: "172.31.1.13"}]
     run_list:
       - role[w_common_role]
       - role[w_haproxy_role]
@@ -75,7 +90,7 @@ suites:
   - name: test_w_varnish
     driver:
       network:
-        - ["private_network", {ip: "172.31.2.12"}]
+        #- ["private_network", {ip: "172.31.2.12"}]
     run_list:
       - role[w_common_role]
       - role[w_varnish_role]
@@ -84,14 +99,14 @@ suites:
   - name: test_w_apache
     driver:
       network:
-        - ["private_network", {ip: "172.31.3.12"}]
+        #- ["private_network", {ip: "172.31.3.12"}]
     run_list:
       - role[w_common_role]
       - role[w_apache_role]
   - name: test_w_memcached
     driver:
       network:
-        - ["private_network", {ip: "172.31.4.12"}]
+        #- ["private_network", {ip: "172.31.4.12"}]
     run_list:
       - role[w_common_role]
       - role[w_memcached_role]
@@ -102,14 +117,14 @@ suites:
   - name: test_w_percona
     driver:
       network:
-        - ["private_network", {ip: "172.31.6.12"}]
+        #- ["private_network", {ip: "172.31.6.12"}]
     run_list:
       - role[w_common_role]
       - role[w_percona_role]
   - name: test_w_nfs
     driver:
       network:
-        - ["private_network", {ip: "172.31.7.12"}]
+        #- ["private_network", {ip: "172.31.7.12"}]
     run_list:
       - role[w_common_role]
       - role[w_nfs_role]
