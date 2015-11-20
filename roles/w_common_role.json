@@ -8,11 +8,13 @@
       "web_apps": [
         {
           "vhost": {
+            "docroot": "/websites/examplewebsite.com/www",
             "main_domain": "examplewebsite.com",
             "aliases": ["www.examplewebsite.com"]
           },
           "deploy": {
 			      "repo_ip": "9.9.9.9",
+			      "repo_path": "/websites/examplewebsite.com",
 		        "repo_domain": "git.examplewebsite.com",
 		        "repo_url": "https://git.examplewebsite.com/www.git"
           },
@@ -32,11 +34,12 @@
         },
 		    {
           "vhost": {
-		        "docroot": "examplewebsite.com/admin",
+		        "docroot": "/websites/examplewebsite.com/admin",
             "main_domain": "admin.examplewebsite.com",
             "aliases": ["admin.examplewebsite.com"]
           },
           "deploy": {
+            "repo_path": "/websites/examplewebsite.com/admin",
 		        "repo_url": "https://git.examplewebsite.com/admin.git"
           },
 	        "connection_domain": {
