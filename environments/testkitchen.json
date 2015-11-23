@@ -26,7 +26,7 @@
 	    }
     },
     "chefserver":{
-      "ip": "10.10.1.84",
+      "ip": "172.31.0.11",
       "hostname": "chefserver.examplechefserver.com"
     },
     "dbhosts": {
@@ -91,7 +91,7 @@
     "percona": {
       "cluster": {
         "wsrep_cluster_name":"vagrant_cluster",
-        "cluster_ips": ["172.31.6.12"]
+        "cluster_ips": []
       },
       "server": {
         "key_buffer": "512M",
