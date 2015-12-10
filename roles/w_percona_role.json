@@ -9,7 +9,7 @@
         "keyserver": "hkp://keyserver.ubuntu.com:80"
       },
       "server": {
-        "role": "cluster",
+        "role": ["cluster"],
         "port": 3306,
         "replication": {"port": 3306},
         "root_password": "rootpw!"
@@ -17,7 +17,8 @@
       "backup": {"password": "backuppw!"},
       "cluster": {
         "package":"percona-xtradb-cluster-56",
-        "wsrep_sst_receive_interface":"eth0"
+        "wsrep_sst_receive_interface":"eth0",
+        "wsrep_sst_auth": "sstuser:sstpasswd!"
       }
     }
   },

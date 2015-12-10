@@ -2,9 +2,17 @@
   "name": "w_apache_role",
   "json_class": "Chef::Role",
   "chef_type": "role",
-  "default_attributes": {
+  "override_attributes": {
     "apache": {
       "access_file_name": ".htaccess"
+    },
+    "haproxy": {
+      "members": [{
+        "hostname": "percona01",
+        "ipaddress": "172.31.6.12",
+        "port": 3306,
+        "ssl_port": 3306
+      }]
     }
   },
   "run_list": [
