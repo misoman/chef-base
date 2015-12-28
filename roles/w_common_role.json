@@ -4,7 +4,6 @@
   "chef_type": "role",
   "default_attributes": {
     "w_common": {
-      "vmware-tools_enabled": false,
       "web_apps": [
         {
           "vhost": {
