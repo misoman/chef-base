@@ -76,17 +76,18 @@ Open http://examplewebsite.com in browser to see the index.php is displayed. Cha
 
 ## Cookbook Development Workflow
 
+### clone all serverspect tests as git submodules
+```shell
+git submodule init
+git submodule update
+```
+
 ### Create feature branch
 ```shell
 git checkout -b feature
 ```
-### Write chefspec test, modify cookbook, and run test, repeat till pass
-```shell
-subl spec/w_common/default_spec.rb
-subl cookbook/w_common/recipes/default.rb
-chef exec rspec spec/w_common/default_spec.rb
-```
-### if you passed chefspec test, write serverspec test
+
+### Write serverspec test, modify cookbook, and run test, repeat till pass
 ```shell
 subl test/integration/test_w_common/serverspec/localhost/default_spec.rb
 ```
