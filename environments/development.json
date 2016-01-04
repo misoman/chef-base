@@ -79,11 +79,14 @@
       },
       "phpmyadmin": {
         "enabled": true
-      }
+      },
+      "ssl_enabled": true
     },
     "phpmyadmin": {
       "home": "/websites/phpmyadmin",
-      "home_alias": "/phpmyadmin"
+      "home_alias": "/phpmyadmin",
+      "user": "www-data",
+      "group": "www-data"
     },
     "w_memcached": {
       "ips": ["127.0.0.1"]
