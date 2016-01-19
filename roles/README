@@ -1,0 +1,21 @@
+Place following role files in this directory:
+* w_common_role.json
+* w_apache_role.json
+* w_memcached_role.json
+* w_nfs_role.json
+* w_percona_role.json
+* w_mysql_role.json
+* w_haproxy_role.json
+* w_varnish_role.json
+
+in case you will have multiple group of vhosts, you can separate w_common_role like following:
+* w_common_dogs_role.json
+* w_common_cats_role.json
+
+and node1.json, node2.json, node3.json can have w_common_dogs_role in runlist, while node 4-6 can have cats.
+
+in case you will have multiple clusters for percona, you can separate w_percona_role like following:
+* w_percona_apple_role.json
+* w_percona_orange_role.json
+
+and node11.json, node12.json, node13.json can have w_percona_apple_role in runlist, while node 14-16 can have orange.
