@@ -1,6 +1,3 @@
-[submodule "test/fixtures/roles"]
-	path = test/fixtures/roles
-	url = https://github.com/haapp/serverspec-roles.git
 [submodule "test/integration/test_w_apache"]
 	path = test/integration/test_w_apache
 	url = https://github.com/haapp/serverspec-w_apache.git
@@ -28,3 +25,6 @@
 [submodule "test/integration/test_w_haproxy_backup"]
 	path = test/integration/test_w_haproxy_backup
 	url = https://github.com/haapp/serverspec-w_haproxy.git
+[submodule "test/fixtures/roles"]
+	path = test/fixtures/roles
+	url = https://github.com/haapp/serverspec-roles.git
