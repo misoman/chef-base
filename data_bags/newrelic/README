@@ -1,0 +1,6 @@
+in this folder create newrelic_license.json with following content
+
+{
+  "id": "newrelic_license",
+  "newrelic_license_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
