@@ -40,6 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webapp.vm.provision "chef_zero" do |chef|
       #chef.cookbooks_path = "../cookbooks"
       chef.roles_path = "roles"
+      chef.nodes_path = "nodes"
       chef.environments_path = "environments"
       chef.environment = "development"
       chef.data_bags_path = "data_bags"
