@@ -1,4 +1,4 @@
-PHP High Availability Multi Tier Application Chef Base
+PHP High Availability Multi Tier App Chef Base
 ==========================================================
 [![Build Status](https://travis-ci.org/haapp/chef-base.svg?branch=master)](https://travis-ci.org/haapp/chef-base)
 
