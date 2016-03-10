@@ -68,6 +68,12 @@ $ sudo apt-get install vagrant
 $ sudo apt-get install chefdk
 ```
 
+## Installing reqired Gems
+Run following command to install nessesary Gems
+```shell
+bundle install
+```
+
 ## PHP Development Workflow
 **fllowing sections, ```subl``` command is used to launch Sublime Text as editor from command line to edit files
 
