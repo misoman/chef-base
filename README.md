@@ -1,4 +1,4 @@
-PHP High Availability Multi Tier Application Chef Base Example
+PHP High Availability Multi Tier Application Chef Base
 ==========================================================
 [![Build Status](https://travis-ci.org/haapp/chef-base.svg?branch=master)](https://travis-ci.org/haapp/chef-base)
 
@@ -21,28 +21,47 @@ A common cookbook for all servers enables following operations/features for all 
 - [Newrelic Server Monitoring](http://newrelic.com/server-monitoring) with custom configuration (optionally)
 
 ## Pre Reqirements
-Enable VT-x [in Windows 8](http://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/), [in Windows 7](http://www.sysprobs.com/disable-enable-virtualization-technology-bios)
+Enable VT-x [in Windows 10 or Windows 8](http://www.howtogeek.com/213795/how-to-enable-intel-vt-x-in-your-computers-bios-or-uefi-firmware/), [in Windows 7](http://www.sysprobs.com/disable-enable-virtualization-technology-bios)
+After enabling VT-X, if you get "VT-x is not available. (VERR_VMX_NO_VMX)" error on virtual box, run ```bcdedit /set hypervisorlaunchtype off``` as Administrator in cmd and restart your computer.
 
 Install following DevOps tools:
 - [VirtualBox](http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html)
 - [Vagrant](https://www.vagrantup.com/downloads.html)
 - [ChefDK](https://downloads.chef.io/chef-dk/)
 
-in Windows cmd (Administrator) or [ConEmu](https://chocolatey.org/packages/ConEmu) with [Chocolatey](https://chocolatey.org/):
+### Windows 
+cmd (Administrator) or [ConEmu](https://chocolatey.org/packages/ConEmu) with [Chocolatey](https://chocolatey.org/):
 ```cmd
 C:\Users\John>choco install virtualbox -y
 C:\Users\John>choco install vagrant -y
 C:\Users\John>choco install chefdk -y
 ```
+Use [Windows Environment Variables Editor](http://eveditor.com/) for your convenience (Optional).
+Your PATH environmental variable must end like this:
+```
+... other software
+C:\Program Files\Git\cmd;
+C:\Program Files\Git\mingw64\bin;
+C:\Program Files\Git\usr\bin;
+C:\ProgramData\chocolatey\bin;
+C:\Program Files\Oracle\VirtualBox;
+C:\HashiCorp\Vagrant\bin;
+C:\opscode\chefdk\embedded\bin;
+C:\opscode\chefdk\bin\
+```
 
-in Mac Terminal with [Homebrew](http://brew.sh/) and [Cask](http://caskroom.io/):
+Set ```GEM_PATH``` user variable as ```C:\opscode\chefdk\embedded\lib\ruby\gems\2.1.0```
+
+### Mac 
+Terminal with [Homebrew](http://brew.sh/) and [Cask](http://caskroom.io/):
 ```shell
 $ brew cask install virtualbox
 $ brew cask install vagrant
 $ brew cask install chefdk
 ```
 
-in Ubuntu Terminal with apt-get:
+### Ubuntu 
+Terminal with apt-get:
 ```shell
 $ sudo apt-get install virtualbox
 $ sudo apt-get install vagrant
@@ -76,7 +95,13 @@ Open http://examplewebsite.com in browser to see the index.php is displayed. Cha
 
 ## Cookbook Development Workflow
 
-### clone all serverspect tests as git submodules
+### Create specific cookbook
+```shell
+cd cookbooks
+chef generate cookbook uk_web -C 'Joel Handwell' -m 'joelhandwell@gmail.com'
+```
+
+### Clone all serverspec tests as git submodules
 ```shell
 git submodule init
 git submodule update
@@ -92,21 +117,21 @@ git checkout -b feature
 subl test/integration/test_w_common/serverspec/localhost/default_spec.rb
 ```
 
-### create and execute initial apply Chef cookbook onto VM
+### Create and execute initial apply Chef cookbook onto VM
 ```shell
 chef exec kitchen list
 chef exec kitchen create common
 chef exec kitchen setup common
 ```
 
-### if you get error, modify cookbook and apply Chef again
+### If you get error, modify cookbook and apply Chef again
 
 ```shell
 subl cookbook/w_common/recipes/default.rb
 chef exec kitchen converge common
 ```
 
-### run serverspec
+### Run serverspec
 if it's executed without error, run serverspec test, and if test fail, edit cookbook until pass, and delete VM after pass, and run end to end test for make sure, and commit change.
 
 ```shell
