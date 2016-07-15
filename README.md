@@ -58,6 +58,7 @@ Terminal with [Homebrew](http://brew.sh/) and [Cask](http://caskroom.io/):
 $ brew cask install virtualbox
 $ brew cask install vagrant
 $ brew cask install chefdk
+$ echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile
 ```
 
 ### Ubuntu 
@@ -66,6 +67,7 @@ Terminal with apt-get:
 $ sudo apt-get install virtualbox
 $ sudo apt-get install vagrant
 $ sudo apt-get install chefdk
+$ echo 'eval "$(chef shell-init bash)"' >> ~/.bashrc
 ```
 
 ## Installing reqired Gems
