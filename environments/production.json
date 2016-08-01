@@ -65,7 +65,7 @@
       "multi_cookie_enabled": true
     },
     "apache": {
-      "listen_ports": ["80"],
+      "listen": ["*:80", "*:443"],
       "default_site_port": "80"
     },
     "w_apache": {
