@@ -5,6 +5,7 @@
 *.log
 *.bundle
 .DS_Store
+ssh.exe.stackdump
 
 nodes/webapp-*.json
 nodes/vagrant-*.json
