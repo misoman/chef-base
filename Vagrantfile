@@ -37,9 +37,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     webapp.vm.network "private_network", ip: "192.168.33.10"
     webapp.ohai.primary_nic = "eth1"
     webapp.vm.provision "chef_zero" do |chef|
-      chef.roles_path = "roles"
+      chef.roles_path = "test/fixtures/roles"
       chef.nodes_path = "nodes"
-      chef.environments_path = "environments"
+      chef.environments_path = "test/fixtures/environments"
       chef.environment = "development"
       chef.data_bags_path = "test/fixtures/data_bags"
       #chef.add_role "w_haproxy_role"
