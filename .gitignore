@@ -6,6 +6,7 @@
 *.bundle
 .DS_Store
 
+nodes/webapp-*.json
 nodes/vagrant-*.json
 cookbooks/
 vendor/*
