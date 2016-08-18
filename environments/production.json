@@ -83,8 +83,7 @@
       }
     },
     "phpmyadmin": {
-      "home": "/websites/phpmyadmin",
-      "home_alias": "/phpmyadmin"
+      "enabled": false
     },
     "w_memcached": {
       "ips": ["127.0.0.1"]

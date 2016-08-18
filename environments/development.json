@@ -78,15 +78,9 @@
         "enabled": false
       },
       "phpmyadmin": {
-        "enabled": true
+        "enabled": false
       },
       "ssl_enabled": true
-    },
-    "phpmyadmin": {
-      "home": "/websites/phpmyadmin",
-      "home_alias": "/phpmyadmin",
-      "user": "www-data",
-      "group": "www-data"
     },
     "w_memcached": {
       "ips": ["127.0.0.1"]
@@ -97,9 +91,9 @@
         "cluster_ips": ["127.0.0.1"]
       },
       "server": {
-        "key_buffer": "512M",
-        "query_cache_size": "256M",
-        "innodb_buffer_pool_size": "512M",
+        "key_buffer": "64M",
+        "query_cache_size": "64M",
+        "innodb_buffer_pool_size": "64M",
         "bind_address": "127.0.0.1"
       },
       "skip_passwords": false
